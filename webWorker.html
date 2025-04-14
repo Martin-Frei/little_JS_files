@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Web Worker Zähler</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body>
+
+<h1>Web Worker API</h1>
+<p>Zähler: <output id="result">0</output></p>
+
+<button onclick="startWorker()">▶️ Start Worker</button> 
+<button onclick="stopWorker()">⛔ Stop Worker</button>
+
+<script>
+let w;
+
+function startWorker() {
+  const x = document.getElementById("result");
+
+  if (typeof(Worker) !== "undefined") {
+    if (!w) {
+      w = new Worker("webWorker.js");
+    }
+    w.onmessage = function(event) {
+      x.textContent = event.data;
+    };
+  } else {
+    x.textContent = "Sorry! Web Worker wird nicht unterstützt.";
+  }
+}
+
+function stopWorker() {
+  if (w) {
+    w.terminate();
+    w = undefined;
+  }
+}
+</script>
+
+</body>
+</html>

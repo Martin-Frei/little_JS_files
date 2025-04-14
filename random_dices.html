@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .player{
+        margin: 20px;
+    }
+
+    .box{
+        border: 1px solid grey;
+        border-radius: 10px;
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+        font-size: 40px;
+    }
+    button{
+        cursor: pointer
+        margin
+        20px;
+        padding: 5px 10px;
+        background-color: grey;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+
+</style>
+<body>
+    
+    <h1>Roll the Dices game</h1>
+    <p>Click to roll the dices</p>
+    <div class="container">
+        <div class="player">
+            <h3>Player 1</h3>
+            <div id="dice1" class="box">?</div>
+        </div> 
+        <div class="player">
+            <h3>Player 2</h3>
+            <div id="dice2" class="box">?</div>
+        </div>
+    </div>
+    
+    <div>
+    <button onclick="rollDice()">Roll Dice</button>
+    </div>
+    <h2 id="result">The winner is showing here</h2>
+        
+    
+</body>
+<script src="./random_dices.js"></script>
+</html>

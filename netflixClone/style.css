@@ -7,7 +7,7 @@
 body,
 html {
   overflow-x: hidden;
-  background: var(--black);
+  background: let(--black);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -47,15 +47,15 @@ nav {
 }
 
 .btn-small {
-  background-color: var(--primaryColor);
-  color: var(--white);
+  background-color: let(--primaryColor);
+  color: let(--white);
   padding: 8px 15px;
   border: none;
   border-radius: 8px;
 }
 
 .hero-text {
-  color: var(--white);
+  color: let(--white);
   width: 50%;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -81,20 +81,20 @@ nav {
 .email-box input[type="email"] {
   padding: 20px 20px;
   background: none;
-  border: 1px solid var(--links);
+  border: 1px solid let(--links);
   width: 70%;
 }
 
 .email-box input[type="email"]::placeholder {
-  color: var(--links);
+  color: let(--links);
   font-size: 18px;
 }
 
 .email-box input[type="submit"] {
   padding: 20px 20px;
-  background: var(--primaryColor);
+  background: let(--primaryColor);
   border: none;
-  color: var(--white);
+  color: let(--white);
   font-weight: bold;
   font-size: 20px;
   width: 28%;
@@ -114,7 +114,7 @@ nav {
 }
 
 #slider h2 {
-  color: var(--white);
+  color: let(--white);
   max-width: 720px;
   margin: 50px auto 10px auto;
   font-weight: 600;
@@ -128,7 +128,7 @@ nav {
 .card {
   flex: 0 0 220px;
   margin: 10px;
-  background-color: var(--white);
+  background-color: let(--white);
   height: 300px;
   border-radius: 10px;
   overflow: hidden;
@@ -152,7 +152,7 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.564);
-  color: var(--white);
+  color: let(--white);
   font-size: 30px;
   padding: 10px;
   cursor: pointer;
@@ -170,11 +170,11 @@ nav {
 .card span {
   position: absolute;
   z-index: 10;
-  color: var(--black);
+  color: let(--black);
   bottom: 20px;
   left: 0px;
   font-size: 80px;
-  -webkit-text-stroke: 3px var(--white);
+  -webkit-text-stroke: 3px let(--white);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
@@ -185,8 +185,8 @@ nav {
 }
 
 .faq-item{
-    background-color: var(--baseColor);
-    color: var(--white);
+    background-color: let(--baseColor);
+    color: let(--white);
     border-radius: 5px;
     margin-bottom: 10px;
     overflow: hidden;
@@ -238,7 +238,7 @@ nav {
 }
 
 .faq-container h2{
-    color: var(--white);
+    color: let(--white);
     margin-bottom: 10px;
 }
 
@@ -247,7 +247,7 @@ nav {
     max-width: 720px;
     margin: 0 auto;
     text-align: center;
-    color: var(--white);
+    color: let(--white);
 }
 
 
@@ -268,7 +268,7 @@ nav {
     max-width: 720px;
     margin: 30px auto;
     gap: 10px;
-    color: var(--white);
+    color: let(--white);
 }
 
 .grid-card{
@@ -292,7 +292,7 @@ width: 50px;
 }
 
 .grid-card p {
-    color: var(--links);
+    color: let(--links);
     margin-top: 20px;
     line-height: 20px;
     font-size: 14px;

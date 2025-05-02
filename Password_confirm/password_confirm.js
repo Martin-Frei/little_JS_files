@@ -14,6 +14,21 @@ myInput.onblur = function() {
   document.getElementById("message").style.display = "none";
 }
 
+let submitButton = document.querySelector('input[type=submit]');
+
+function checkAllValid() {
+  if (
+    letter.classList.contains("valid") &&
+    capital.classList.contains("valid") &&
+    number.classList.contains("valid") &&
+    length.classList.contains("valid")
+  ) {
+    submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
+  }
+}
+
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
   // Validate lowercase letters
@@ -54,4 +69,9 @@ myInput.onkeyup = function() {
     length.classList.remove("valid");
     length.classList.add("invalid");
   }
-}
+  checkAllValid();
+};
+
+window.onload = () => {
+    submitButton.disabled = true;
+  };

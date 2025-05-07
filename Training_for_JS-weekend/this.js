@@ -106,3 +106,30 @@ const intervalID =setInterval(()=>{
     }
 }, 1000)
 
+
+let i = 0 ;
+let interval = setInterval(()=> {
+    console.log('Interval running'+ i);
+    i ++ ;
+    if( i===6){
+        clearInterval(interval);
+        console.log('Interval stopped')
+    }
+}, 2000)
+
+
+// syncronize Programm
+console.log('one');
+console.log('zwei');
+console.log('three');
+
+//async Programm
+console.log('one');
+setTimeout(()=> {
+    console.log('two')
+}, 3000)
+console.log('three');
+console.log('four');
+console.log('five');
+
+//NPX installieren 

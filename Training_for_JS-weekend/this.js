@@ -82,7 +82,7 @@ function greet(){
     console.log('Hello after 3 second again')
 }
 
-setTimeout(greet, 3000)  // greet without () becaues nit call the function, only give the referenz
+setTimeout(greet, 3000)  // greet without () , becaues () call the function, withou () only give the referenz
 
 setInterval(()=>{
     console.log('repeats evers 1 secon')

@@ -58,11 +58,13 @@ function login(username, password) {
 function fetchUser(username) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log({ name: "admin", role: "Supervisor" });
-      resolve();
+      const userData = { name: "admin", role: "Supervisor" };
+      console.log(userData);
+      resolve(userData); 
     }, 2000);
   });
 }
+
 function displayDashboard(data) {
   return new Promise((resolve) => {
     setTimeout(() => {

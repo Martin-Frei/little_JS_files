@@ -40,26 +40,60 @@ askReceipe(startCocking)
 
 
 //callback hell
-setTimeout(()=>{
-    console.log('Woke up')
-        setTimeout(()=>{
-            console.log('make Coffee');
+// setTimeout(()=>{
+//     console.log('Woke up')
+//         setTimeout(()=>{
+//             console.log('make Coffee');
             
-                setTimeout(()=>{
-                    console.log('drink Coffee');
+//                 setTimeout(()=>{
+//                     console.log('drink Coffee');
                 
-                setTimeout(()=>{
-                console.log('start Working');
-            }, 2000)
-        }, 2000)
+//                 setTimeout(()=>{
+//                 console.log('start Working');
+//             }, 2000)
+//         }, 2000)
+//     }, 2000)
+// }, 2000)
+
+function wakeup(callback){
+    setTimeout(()=>{
+        console.log('woke up')
+        callback()
     }, 2000)
-}, 2000)
+}
 
 
+function makeCoffee(callback){
+    setTimeout(()=>{
+        console.log('make Coffee')
+        callback()
+    }, 2000)
+}
 
 
+function checkEmail(callback){
+    setTimeout(()=>{
+        console.log('check Email')
+        callback()
+    }, 2000)
+}
+
+function goToWork(callback){
+    setTimeout(()=>{
+        console.log('go to work')
+        callback()
+    }, 2000)
+}
 
 
-
+wakeup(()=>{
+    makeCoffee(()=>{
+        checkEmail(()=>{
+            goToWork(()=>{
+                
+            })
+        })
+    })
+})
 
 

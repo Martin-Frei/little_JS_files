@@ -31,9 +31,6 @@
 
 //     console.log(delayedTask)
 
-
-
-
 // function takeOrder(order) {
 //   return new Promise((resolve) => {
 //     setTimeout(() => {
@@ -72,8 +69,43 @@
 //     console.log("Some thing went wrong");
 //   });
 
-
 // callback
+function doTask(success, callback) {
+  if (success) {
+    callback(null, "Task complete");
+  } else {
+    callback("Error : task failed");
+  }
+}
+
+doTask(false, function (error, result) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(result);
+  }
+});
+
+//promise
+function doTask2(success) {
+  return new Promise((resolve, reject) => {
+    if (success) {
+      resolve("Task complete");
+    } else {
+      resolve("Error : task failed");
+    }
+  });
+}
+
+doTask2(true)
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+  // callback
       function doTask(success, callback) {
         if (success) {
           callback(null, "Task complete");
@@ -110,4 +142,3 @@
         .catch((err) => {
           console.log(err);
         });
-

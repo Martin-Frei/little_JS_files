@@ -67,3 +67,14 @@ function createRowTemplat(data){
         </div>
         ` 
 }
+
+
+
+fetch("https://jsonplaceholder.typicode.com/user")
+.then(res => res.jaion())
+.then(data => console.log(data))
+
+// .catch(error => console.log('Something went wrong',error))
+.catch(error => {
+  document.getElementById('allPost').innerText = 'Could not load the Data'
+})

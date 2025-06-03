@@ -83,8 +83,10 @@ fetch('https://catfact.ninja/fact')
 // .then(data => console.log('private api',data))
 
 // Status 403 = forbidden
-fetch('https://httpstat.us403'),{
-.then((response) => console.log("Status", response.status))}
+fetch('https://httpstat.us/403')
+  .then((response) => console.log("Status:", response.status))
+  .catch((error) => console.error("Fetch error:", error));
+
 
 
 

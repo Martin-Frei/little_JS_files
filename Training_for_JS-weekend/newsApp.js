@@ -1,17 +1,23 @@
 // &lang=${lang.value}&country=${country.value}
 
-let lang = document.getElementById('lang')
-let country = document.getElementById('country');
-let category = document.getElementById('category');
+// let lang = document.getElementById('lang')
+// let country = document.getElementById('country');
+// let category = document.getElementById('category');
 
 
-const apiUrl = `https://gnews.io/api/v4/search?q=example&category=${category.value}&apikey=${myApi}`;
+// const apiUrl = `https://gnews.io/api/v4/search?q=example&lang=${lang.value}&country=${country.value}&category=${category.value}&apikey=${myApi}`;
 
 const loading = document.getElementById('loading')
 const container = document.getElementById('news-container')
-console.log(myApi)
+
 
 async function fetchNews() {
+    let lang = document.getElementById('lang')
+    let country = document.getElementById('country');
+    let category = document.getElementById('category');
+
+
+    const apiUrl = `https://gnews.io/api/v4/search?q=example&lang=${lang.value}&country=${country.value}&category=${category.value}&apikey=${myApi}`;
     try{
     let response = await fetch(apiUrl);
     let data = await response.json();
